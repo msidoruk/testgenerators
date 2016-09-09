@@ -1,3 +1,0 @@
-CREATE SCHEMA [Dicts]
-	AUTHORIZATION [dbo];
-
