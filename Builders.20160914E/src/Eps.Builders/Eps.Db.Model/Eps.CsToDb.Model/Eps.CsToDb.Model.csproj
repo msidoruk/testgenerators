@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2192834-9CDD-41BA-93CE-56512D25A630}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Eps.CsToDb.Model</RootNamespace>
+    <AssemblyName>Eps.Db.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Eps.CsToDb.Meta, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Eps.CsToDb\bin\Debug\Eps.CsToDb.Meta.dll</HintPath>
+    </Reference>
+    <Reference Include="Eps.DbFeatures">
+      <HintPath>..\..\bin\Debug\Eps.DbFeatures.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbModelTemplates\ActsForRange\HasActivityRange.cs" />
+    <Compile Include="DbModelTemplates\ActsForRange\HasActivityDate.cs" />
+    <Compile Include="DbModelTemplates\HasToBeApproved\Dicts\ApprovementStatuses.cs" />
+    <Compile Include="DbModelTemplates\HasToBeApproved\HasToBeApproved.cs" />
+    <Compile Include="DbModelTemplates\RequireConfirmation\ConfirmationRequired.cs" />
+    <Compile Include="DbModelTemplates\StandardDictionary\StandardDictionary.cs" />
+    <Compile Include="DbModelTemplates\WithDescription.cs" />
+    <Compile Include="DbTypes.cs" />
+    <Compile Include="InternalDictionaries\ConfirmationStates.cs" />
+    <Compile Include="InternalDictionaries\JuridicalPersonTypes.cs" />
+    <Compile Include="InternalDictionaries\EmployeeAddressTypes.cs" />
+    <Compile Include="InternalDictionaries\EmployeeDocumentScanTypes.cs" />
+    <Compile Include="InternalDictionaries\SimpleYN.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tables\Auth\Entities\Groups.cs" />
+    <Compile Include="Tables\Auth\Entities\Permissions.cs" />
+    <Compile Include="Tables\Auth\Entities\Roles.cs" />
+    <Compile Include="Tables\Auth\Entities\Claims.cs" />
+    <Compile Include="Tables\Auth\Relations\GroupRoles.cs" />
+    <Compile Include="Tables\Auth\Relations\PermissionClaims.cs" />
+    <Compile Include="Tables\Auth\Relations\RolePermissions.cs" />
+    <Compile Include="Tables\Auth\Relations\UserClaims.cs" />
+    <Compile Include="Tables\Auth\Relations\UserGroups.cs" />
+    <Compile Include="Tables\Auth\Relations\UserRoles.cs" />
+    <Compile Include="Tables\Auth\Entities\Users.cs" />
+    <Compile Include="Tables\Auth\UserSessions.cs" />
+    <Compile Include="Tables\Auth\UserSessionVars.cs" />
+    <Compile Include="Tables\Dicts\ContactEmployeeTypes.cs" />
+    <Compile Include="Tables\Jp\Dicts\JuridicalPersonAddressTypes.cs" />
+    <Compile Include="Tables\Jp\Dicts\JuridicalPersonAbonentsNotificationWayTypes.cs" />
+    <Compile Include="Tables\Jp\Dicts\JuridicalPersonContractStateTypes.cs" />
+    <Compile Include="Tables\Jp\Dicts\JuridicalPersonFinancialStates.cs" />
+    <Compile Include="Tables\Dicts\Regions.cs" />
+    <Compile Include="Tables\Dicts\Okopfs.cs" />
+    <Compile Include="Tables\Dicts\GoodsCategories.cs" />
+    <Compile Include="Tables\Dicts\BankProducts.cs" />
+    <Compile Include="Tables\Dicts\DocumentsStoringPlaces.cs" />
+    <Compile Include="Tables\Dicts\BusinessAreas.cs" />
+    <Compile Include="Tables\Dicts\BankDepartments.cs" />
+    <Compile Include="Tables\Jp\Dicts\JuridicalPersonAccountTypes.cs" />
+    <Compile Include="Tables\Jp\Employees\EmployeeDocumentScans.cs" />
+    <Compile Include="Tables\Jp\Employees\EmployeeDocuments.cs" />
+    <Compile Include="Tables\Jp\Employees\Dicts\EmployeeContactTypes.cs" />
+    <Compile Include="Tables\Jp\Dicts\JuridicalPersonDocumentTypes.cs" />
+    <Compile Include="Tables\Jp\Dicts\JuridicalPersonContactTypes.cs" />
+    <Compile Include="Tables\Jp\Dicts\JuridicalPersonCheckTypes.cs" />
+    <Compile Include="Tables\Eps\DocumentScans.cs" />
+    <Compile Include="Tables\Eps\JuridicalPersons.cs" />
+    <Compile Include="Tables\Jp\JpDetails\Accounts.cs" />
+    <Compile Include="Tables\Jp\JpDetails\StateRegOkveds.cs" />
+    <Compile Include="Tables\Jp\JpDetails\StateRegAddresses.cs" />
+    <Compile Include="Tables\Jp\JpDetails\StateRegistrations.cs" />
+    <Compile Include="Tables\Jp\JpDetails\Goods.cs" />
+    <Compile Include="Tables\Jp\JpDetails\BankRequisites.cs" />
+    <Compile Include="Tables\Jp\JpDetails\BankProducts.cs" />
+    <Compile Include="Tables\Jp\JpDetails\Infos.cs" />
+    <Compile Include="Tables\Jp\JpDetails\Checks.cs" />
+    <Compile Include="Tables\Jp\JpDetails\Documents.cs" />
+    <Compile Include="Tables\Jp\JpDetails\Contracts.cs" />
+    <Compile Include="Tables\Jp\JpDetails\Contacts.cs" />
+    <Compile Include="Tables\Jp\Employees\EmployeeContacts.cs" />
+    <Compile Include="Tables\Jp\Employees\EmployeeAddresses.cs" />
+    <Compile Include="Tables\Jp\Employees\Employees.cs" />
+    <Compile Include="Tables\Jp\Employees\Dicts\JuridicalPersonDocumentTypes.cs" />
+    <Compile Include="Tables\Jp\Contractors.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

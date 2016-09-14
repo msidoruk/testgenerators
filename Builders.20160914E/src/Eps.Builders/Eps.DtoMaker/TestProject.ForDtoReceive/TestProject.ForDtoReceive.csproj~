@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F6F1245-55C2-4EFB-B0AF-CF64EAC4AD5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestProject.ForDtoReceive</RootNamespace>
+    <AssemblyName>TestProject.ForDtoReceive</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="linq2db, Version=1.0.7.4, Culture=neutral, PublicKeyToken=f19f8aed7feff67e, processorArchitecture=MSIL">
+      <HintPath>..\packages\linq2db.1.0.7.4\lib\net45\linq2db.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataConnectionFactoryAuto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Compile Include="Dto\Autobuilt\Enums\JuridicalPersonAccountType.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\Contractor.cs" />
+    <Compile Include="Dto\Autobuilt\Eps\JuridicalPerson.cs" />
+    <Compile Include="Dto\Autobuilt\Eps\DocumentScan.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\Account.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\BankRequisite.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\Check.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\Contact.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\Document.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\EmployeeAddress.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\EmployeeContact.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\EmployeeDocument.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\EmployeeDocumentScan.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\Employee.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\Info.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\BankProduct.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\Contract.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\Good.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\StateRegistration.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\StateRegAddress.cs" />
+    <Compile Include="Dto\Autobuilt\JuridicalPerson\StateRegOkved.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\ApprovementStatus.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\BankDepartment.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\BankProduct.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\BusinessArea.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\DocumentsStoringPlace.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\GoodsCategory.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\JuridicalPersonAbonentsNotificationWayType.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\JuridicalPersonAccountType.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\JuridicalPersonAddressType.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\JuridicalPersonCheckType.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\JuridicalPersonContactType.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\JuridicalPersonContractStateType.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\JuridicalPersonDocumentType.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\EmployeeContactType.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\EmployeeDocumentType.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\JuridicalPersonFinancialState.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\Okopf.cs" />
+    <Compile Include="Dto\Autobuilt\Dicts\Region.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+</Project>
